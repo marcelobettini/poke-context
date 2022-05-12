@@ -25,7 +25,6 @@ function PokemonTable() {
                             <PokemonRow
                                 key={pokemon.id}
                                 pokemon={pokemon}
-                                onInfo={(pokemon) => setSelectedPokemon(pokemon)}
                             />
                         ))}
                 </TableBody>

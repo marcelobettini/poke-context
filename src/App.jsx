@@ -30,7 +30,7 @@ function App() {
     }
     }>
       <div style={{ margin: 'auto', display: "flex", flexDirection: "column", width: '60vw' }}>
-        <h1 className="title">Pokemon Search</h1>
+        <h1>Pokemon Search</h1>
         <PokemonFilter />
         <div
           style={{
@@ -41,9 +41,7 @@ function App() {
           }}
         >
           <PokemonTable />
-
-          {/* solo si hay un selectedPokemon vamos a mostrar el componente */}
-          {selectedPokemon && <PokemonInfo onDismiss={() => setSelectedPokemon(null)} {...selectedPokemon} />}
+          <PokemonInfo />
         </div>
       </div >
     </PokemonContext.Provider >
