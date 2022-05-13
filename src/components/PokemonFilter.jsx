@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { TextField } from "@mui/material";
 
 const PokemonFilter = () => {
-    //atención, no es un array sino un objeto
     const { filter, setFilter } = useContext(PokemonContext)
 
     return < TextField
