@@ -6,7 +6,7 @@ import PokemonContext from "../PokemonContext";
 const PokemonInfo = () => {
     const { selectedPokemon, setSelectedPokemon } = useContext(PokemonContext)
     return selectedPokemon && (
-        <Card sx={{ height: 350, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
+        <Card sx={{ height: 350, width: 280, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
             <CardContent>
 
                 <Typography variant="h5" gutterBottom>{selectedPokemon.name.english}</Typography>

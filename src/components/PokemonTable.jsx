@@ -6,12 +6,12 @@ import { Paper, TableContainer, Table, TableHead, TableRow, TableCell, TableBody
 function PokemonTable() {
     const { filter, data } = useContext(PokemonContext);
     return (
-        <TableContainer component={Paper} sx={{ display: 'flex', mt: '2em' }}>
+        <TableContainer component={Paper}>
             <Table >
                 <TableHead>
                     <TableRow>
-                        <TableCell align="center">Name</TableCell>
-                        <TableCell align="center">Type</TableCell>
+                        <TableCell >Name</TableCell>
+                        <TableCell >Type</TableCell>
                         <TableCell align="center">Action</TableCell>
                     </TableRow>
                 </TableHead>
@@ -20,7 +20,7 @@ function PokemonTable() {
                         .filter(({ name: { english } }) =>
                             english.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
                         )
-                        .slice(0, 6)
+                        .slice(0, 8)
                         .map((pokemon) => (
                             <PokemonRow
                                 key={pokemon.id}
@@ -29,7 +29,7 @@ function PokemonTable() {
                         ))}
                 </TableBody>
             </Table>
-        </TableContainer>
+        </TableContainer >
     );
 }
 
