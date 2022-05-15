@@ -1,6 +1,8 @@
 import { Button, TableRow, TableCell } from "@mui/material"
 import { useContext } from "react";
 import PokemonContext from "../PokemonContext";
+import PropTypes from "prop-types"
+import PokemonType from "../pokemonType";
 
 // onDetail es un custom event, una función que actúa sobre el setter en el componente que tiene el estado (App).
 const PokemonRow = ({ pokemon }) => {
@@ -15,6 +17,9 @@ const PokemonRow = ({ pokemon }) => {
             </TableCell>
         </TableRow>
     );
+}
+PokemonRow.PropTypes = {
+    pokemon: PropTypes.arrayOf(PokemonType)
 }
 
 export default PokemonRow
